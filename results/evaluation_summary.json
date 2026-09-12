@@ -1,0 +1,9 @@
+{
+  "train_session": "session_1_baseline",
+  "cross_session": "session_2_cross",
+  "acc_raw_same": 1.0,
+  "acc_raw_cross": 0.25,
+  "acc_inv_same": 1.0,
+  "acc_inv_cross": 0.75,
+  "winning_feature_type": "invariant"
+}
