@@ -1,0 +1,33 @@
+======================================================================
+ HAND GESTURE PIPELINE BENCHMARK REPORT
+======================================================================
+
+1. ISOLATED CLASSIFIER INFERENCE LATENCY:
+--------------------------------------------------
+Model: Raw Coordinates Model (63D)
+  - Mean Latency:    0.3278 ms
+  - Median Latency:  0.3168 ms
+  - P95 Latency:     0.3773 ms
+  - P99 Latency:     0.5235 ms
+  - Max Throughput:  3050.5 FPS
+
+Model: Invariant Features Model (8D)
+  - Mean Latency:    0.3281 ms
+  - Median Latency:  0.3164 ms
+  - P95 Latency:     0.3848 ms
+  - P99 Latency:     0.5408 ms
+  - Max Throughput:  3048.2 FPS
+
+2. FULL END-TO-END PIPELINE BREAKDOWN:
+--------------------------------------------------
+  1. Camera Capture               :   0.09 ms (  0.4%)
+  2. MediaPipe Landmark Detection :  18.77 ms ( 95.1%)
+  3. Feature Extraction (Invariant):   0.15 ms (  0.8%)
+  4. Classifier Inference         :   0.66 ms (  3.3%)
+  5. Rendering & Annotation       :   0.07 ms (  0.4%)
+--------------------------------------------------
+  Total Per-Frame Latency        : 19.74 ms
+  Effective End-to-End FPS       : 50.7 FPS
+
+3. BOTTLENECK IDENTIFICATION:
+  Primary Bottleneck: 2. MediaPipe Landmark Detection

@@ -1,0 +1,34 @@
+# Virtual environment
+.venv/
+venv/
+ENV/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data directories (raw data shouldn't be committed)
+data/raw/*.csv
+data/*.csv
+data/
+
+# Model checkpoints and weights
+models/*.joblib
+models/*.pkl
+
+# Evaluation output tables (keep directory structure, ignore dynamic generated data)
+results/*.csv
+
+# Temporary files & IDE configs
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Demo video files (keep instructions/placeholder, ignore large binaries)
+demo/*.mp4
+demo/*.avi
+demo/*.mov
+demo/*.mkv
